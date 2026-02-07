@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildID</key>
+	<string>1.0.1</string>
+	<key>FamilyID</key>
+	<integer>133</integer>
+	<key>FolderBinning</key>
+	<dict>
+		<key>OTSS</key>
+		<integer>8</integer>
+		<key>PLSS</key>
+		<integer>5</integer>
+		<key>TRSS</key>
+		<integer>5</integer>
+		<key>UISS</key>
+		<integer>8</integer>
+	</dict>
+	<key>Format</key>
+	<string>PCM</string>
+	<key>Locale</key>
+	<string>zh_CN</string>
+	<key>Menu Version</key>
+	<string>1.2</string>
+	<key>Prefer System Voice</key>
+	<false/>
+	<key>VoiceInfo</key>
+	<dict>
+		<key>Speed</key>
+		<integer>0</integer>
+		<key>Voice</key>
+		<string>VoiceOver</string>
+	</dict>
+	<key>VoiceOver Artist Exceptions Version</key>
+	<integer>222742</integer>
+	<key>VoiceOver Conditioner Rules Version</key>
+	<integer>222093</integer>
+	<key>VoiceOver Kit Version</key>
+	<string>1.4.3f3</string>
+	<key>iTunes Version</key>
+	<string>12.13.9</string>
+</dict>
+</plist>

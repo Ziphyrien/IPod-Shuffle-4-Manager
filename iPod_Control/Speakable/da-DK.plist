@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Locale</key>
+	<string>da-DK</string>
+	<key>UI Strings</key>
+	<dict>
+		<key>bv00</key>
+		<string>Batteri er fuldt</string>
+		<key>bv01</key>
+		<string>Batteri 75%</string>
+		<key>bv02</key>
+		<string>Batteri 50%</string>
+		<key>bv03</key>
+		<string>Batteri 25%</string>
+		<key>bv04</key>
+		<string>Batterispænding er lav</string>
+		<key>ev00</key>
+		<string>Brug iTunes til gendannelse</string>
+		<key>ev01</key>
+		<string>Brug iTunes til synkronesering af musik</string>
+		<key>sv00</key>
+		<string>Genius-miks</string>
+		<key>sv01</key>
+		<string>Alle sange</string>
+		<key>sv02</key>
+		<string>Spilleliste</string>
+		<key>sv03</key>
+		<string>Lydbog</string>
+		<key>sv04</key>
+		<string>Podcast</string>
+		<key>sv05</key>
+		<string>iTunesU</string>
+	</dict>
+	<key>Version</key>
+	<string>1.2</string>
+</dict>
+</plist>

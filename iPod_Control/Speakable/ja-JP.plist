@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Locale</key>
+	<string>ja-JP</string>
+	<key>UI Strings</key>
+	<dict>
+		<key>bv00</key>
+		<string>バッテリー充電済み</string>
+		<key>bv01</key>
+		<string>バッテリー 75%</string>
+		<key>bv02</key>
+		<string>バッテリー 50%</string>
+		<key>bv03</key>
+		<string>バッテリー 25%</string>
+		<key>bv04</key>
+		<string>バッテリー不足</string>
+		<key>ev00</key>
+		<string>復元するには iTunes を使用してください</string>
+		<key>ev01</key>
+		<string>音楽をシンクするには iTunes を使用してください</string>
+		<key>sv00</key>
+		<string>Genius Mix</string>
+		<key>sv01</key>
+		<string>すべての曲</string>
+		<key>sv02</key>
+		<string>プレイリスト</string>
+		<key>sv03</key>
+		<string>オーディオブック</string>
+		<key>sv04</key>
+		<string>Podcast</string>
+		<key>sv05</key>
+		<string>iTunesU</string>
+	</dict>
+	<key>Version</key>
+	<string>1.2</string>
+</dict>
+</plist>

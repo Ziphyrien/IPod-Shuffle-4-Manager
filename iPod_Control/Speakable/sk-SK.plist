@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Locale</key>
+	<string>sk-SK</string>
+	<key>UI Strings</key>
+	<dict>
+		<key>bv00</key>
+		<string>Batéria nabitá</string>
+		<key>bv01</key>
+		<string>Batéria 75%</string>
+		<key>bv02</key>
+		<string>Batéria 50%</string>
+		<key>bv03</key>
+		<string>Batéria 25%</string>
+		<key>bv04</key>
+		<string>Slabá batéria</string>
+		<key>ev00</key>
+		<string>Na obnovu použite iTunes.</string>
+		<key>ev01</key>
+		<string>Na synch. hudby použite iTunes.</string>
+		<key>sv00</key>
+		<string>Genius Mix</string>
+		<key>sv01</key>
+		<string>Všetky skladby</string>
+		<key>sv02</key>
+		<string>Playlist</string>
+		<key>sv03</key>
+		<string>Audio kniha</string>
+		<key>sv04</key>
+		<string>Podcast</string>
+		<key>sv05</key>
+		<string>iTunesU</string>
+	</dict>
+	<key>Version</key>
+	<string>1.2</string>
+</dict>
+</plist>

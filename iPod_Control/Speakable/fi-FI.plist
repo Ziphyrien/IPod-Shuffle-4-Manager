@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Locale</key>
+	<string>fi-FI</string>
+	<key>UI Strings</key>
+	<dict>
+		<key>bv00</key>
+		<string>Akku täynnä</string>
+		<key>bv01</key>
+		<string>Virtaa 75 %</string>
+		<key>bv02</key>
+		<string>Virtaa 50 %</string>
+		<key>bv03</key>
+		<string>Virtaa 25 %</string>
+		<key>bv04</key>
+		<string>Virta vähissä</string>
+		<key>ev00</key>
+		<string>Käytä aituunssia palauttamiseen</string>
+		<key>ev01</key>
+		<string>Käytä aituunssia musiikin synkronoimiseen</string>
+		<key>sv00</key>
+		<string>Genius-miksi</string>
+		<key>sv01</key>
+		<string>Kaikki kappaleet</string>
+		<key>sv02</key>
+		<string>Soittolista</string>
+		<key>sv03</key>
+		<string>Äänikirjat</string>
+		<key>sv04</key>
+		<string>Podcast</string>
+		<key>sv05</key>
+		<string>iTunesU</string>
+	</dict>
+	<key>Version</key>
+	<string>1.2</string>
+</dict>
+</plist>

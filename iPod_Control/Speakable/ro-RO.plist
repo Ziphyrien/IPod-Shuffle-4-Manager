@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Locale</key>
+	<string>ro-RO</string>
+	<key>UI Strings</key>
+	<dict>
+		<key>bv00</key>
+		<string>Baterie plină</string>
+		<key>bv01</key>
+		<string>Baterie la 75%</string>
+		<key>bv02</key>
+		<string>Baterie la 50%</string>
+		<key>bv03</key>
+		<string>Baterie la 25%</string>
+		<key>bv04</key>
+		<string>Baterie slabă</string>
+		<key>ev00</key>
+		<string>Utilizați iTunes pentru a restaura.</string>
+		<key>ev01</key>
+		<string>Utilizați iTunes a sincroniza muzică.</string>
+		<key>sv00</key>
+		<string>Mixaj Genius</string>
+		<key>sv01</key>
+		<string>Toate melodiile</string>
+		<key>sv02</key>
+		<string>Listă de redare</string>
+		<key>sv03</key>
+		<string>Carte audio</string>
+		<key>sv04</key>
+		<string>Podcast</string>
+		<key>sv05</key>
+		<string>iTunesU</string>
+	</dict>
+	<key>Version</key>
+	<string>1.2</string>
+</dict>
+</plist>

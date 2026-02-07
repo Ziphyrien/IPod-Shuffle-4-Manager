@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Locale</key>
+	<string>ru-RU</string>
+	<key>UI Strings</key>
+	<dict>
+		<key>bv00</key>
+		<string>Батарея полностью заряжена</string>
+		<key>bv01</key>
+		<string>Батарея заряжена на 75%</string>
+		<key>bv02</key>
+		<string>Батарея заряжена на 50%</string>
+		<key>bv03</key>
+		<string>Батарея заряжена на 25%</string>
+		<key>bv04</key>
+		<string>Батарея разряжена</string>
+		<key>ev00</key>
+		<string>Для восстановления используйте ай тюнз</string>
+		<key>ev01</key>
+		<string>Для синхронизации музыки используйте ай тюнз</string>
+		<key>sv00</key>
+		<string>Джиниус микс</string>
+		<key>sv01</key>
+		<string>Все песни</string>
+		<key>sv02</key>
+		<string>плэй лист</string>
+		<key>sv03</key>
+		<string>аудио книги</string>
+		<key>sv04</key>
+		<string>Под каст</string>
+		<key>sv05</key>
+		<string>ай тюнз ю</string>
+	</dict>
+	<key>Version</key>
+	<string>1.2</string>
+</dict>
+</plist>

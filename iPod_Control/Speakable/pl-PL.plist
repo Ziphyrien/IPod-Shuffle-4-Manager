@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Locale</key>
+	<string>pl-PL</string>
+	<key>UI Strings</key>
+	<dict>
+		<key>bv00</key>
+		<string>Bateria jest pełna</string>
+		<key>bv01</key>
+		<string>Poziom baterii 75%</string>
+		<key>bv02</key>
+		<string>Poziom baterii 50%</string>
+		<key>bv03</key>
+		<string>Poziom baterii 25%</string>
+		<key>bv04</key>
+		<string>Niski poziom baterii</string>
+		<key>ev00</key>
+		<string>Użyj iTunes do odtworzenia</string>
+		<key>ev01</key>
+		<string>Użyj iTunes do synchronizacji muzyki</string>
+		<key>sv00</key>
+		<string>Miks Genius</string>
+		<key>sv01</key>
+		<string>Wszystkie utwory</string>
+		<key>sv02</key>
+		<string>Lista</string>
+		<key>sv03</key>
+		<string>Książka audio</string>
+		<key>sv04</key>
+		<string>Podcast</string>
+		<key>sv05</key>
+		<string>iTunesU</string>
+	</dict>
+	<key>Version</key>
+	<string>1.2</string>
+</dict>
+</plist>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Locale</key>
+	<string>ko-KR</string>
+	<key>UI Strings</key>
+	<dict>
+		<key>bv00</key>
+		<string>배터리가 완충되었습니다</string>
+		<key>bv01</key>
+		<string>배터리 충전냥 75%</string>
+		<key>bv02</key>
+		<string>배터리 충전냥 50%</string>
+		<key>bv03</key>
+		<string>배터리 충전냥 25%</string>
+		<key>bv04</key>
+		<string>배터리 전원이 부족합니다</string>
+		<key>ev00</key>
+		<string>iTunes를 사용하여 이 iPod을 복원하십시오.</string>
+		<key>ev01</key>
+		<string>iTunes를 사용하여 이 iPod으로 음악을 동기화하십시오.</string>
+		<key>sv00</key>
+		<string>Genius 믹스</string>
+		<key>sv01</key>
+		<string>모든 노래</string>
+		<key>sv02</key>
+		<string>재생목록</string>
+		<key>sv03</key>
+		<string>오디오북</string>
+		<key>sv04</key>
+		<string>Podcast</string>
+		<key>sv05</key>
+		<string>iTunesU</string>
+	</dict>
+	<key>Version</key>
+	<string>1.2</string>
+</dict>
+</plist>

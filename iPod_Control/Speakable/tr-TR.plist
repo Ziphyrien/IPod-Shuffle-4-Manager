@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Locale</key>
+	<string>tr-TR</string>
+	<key>UI Strings</key>
+	<dict>
+		<key>bv00</key>
+		<string>Pil Dolu</string>
+		<key>bv01</key>
+		<string>Pil % 75 Dolu</string>
+		<key>bv02</key>
+		<string>Pil % 50 Dolu</string>
+		<key>bv03</key>
+		<string>Pil % 25 Dolu</string>
+		<key>bv04</key>
+		<string>Pil Azaldı</string>
+		<key>ev00</key>
+		<string>geri yüklemek için lütfen iTunes&apos;u kullanın</string>
+		<key>ev01</key>
+		<string>Müzikleri eşzamanlamak için lütfen iTunes&apos;u kullanın</string>
+		<key>sv00</key>
+		<string>Genius Karması</string>
+		<key>sv01</key>
+		<string>Tüm Parçalar</string>
+		<key>sv02</key>
+		<string>Liste</string>
+		<key>sv03</key>
+		<string>Sesli Kitap</string>
+		<key>sv04</key>
+		<string>Podcast</string>
+		<key>sv05</key>
+		<string>iTunesU</string>
+	</dict>
+	<key>Version</key>
+	<string>1.2</string>
+</dict>
+</plist>
