@@ -1,4 +1,5 @@
 /// iPod Shuffle 4G Manager 数据模型
+library;
 
 class ShufflerConfig {
   String ipodPath;

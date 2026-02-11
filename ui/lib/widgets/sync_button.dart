@@ -22,11 +22,9 @@ class SyncButton extends StatefulWidget {
   State<SyncButton> createState() => _SyncButtonState();
 }
 
-class _SyncButtonState extends State<SyncButton>
-    with TickerProviderStateMixin {
+class _SyncButtonState extends State<SyncButton> with TickerProviderStateMixin {
   late AnimationController _pulseController;
   late AnimationController _hoverController;
-  bool _isHovered = false;
 
   @override
   void initState() {
@@ -66,11 +64,9 @@ class _SyncButtonState extends State<SyncButton>
           ? SystemMouseCursors.click
           : SystemMouseCursors.forbidden,
       onEnter: (_) {
-        setState(() => _isHovered = true);
         _hoverController.forward();
       },
       onExit: (_) {
-        setState(() => _isHovered = false);
         _hoverController.reverse();
       },
       child: GestureDetector(
@@ -100,10 +96,16 @@ class _SyncButtonState extends State<SyncButton>
                                 AppColors.ledRed.withValues(alpha: 0.6),
                               ]
                             : [
-                                Color.lerp(AppColors.amber, AppColors.amberDim,
-                                    0.2 - hoverValue * 0.2)!,
-                                Color.lerp(AppColors.amberDim, AppColors.amber,
-                                    hoverValue * 0.3)!,
+                                Color.lerp(
+                                  AppColors.amber,
+                                  AppColors.amberDim,
+                                  0.2 - hoverValue * 0.2,
+                                )!,
+                                Color.lerp(
+                                  AppColors.amberDim,
+                                  AppColors.amber,
+                                  hoverValue * 0.3,
+                                )!,
                               ],
                       )
                     : const LinearGradient(
@@ -112,20 +114,23 @@ class _SyncButtonState extends State<SyncButton>
                 border: Border.all(
                   color: widget.isEnabled
                       ? (widget.isSyncing ? AppColors.ledRed : AppColors.amber)
-                          .withValues(alpha: 0.5 + hoverValue * 0.3)
+                            .withValues(alpha: 0.5 + hoverValue * 0.3)
                       : AppColors.borderSubtle,
                   width: 1,
                 ),
                 boxShadow: widget.isEnabled
                     ? [
                         BoxShadow(
-                          color: (widget.isSyncing
-                                  ? AppColors.ledRed
-                                  : AppColors.amber)
-                              .withValues(
-                                  alpha: 0.15 +
-                                      hoverValue * 0.1 +
-                                      pulseValue * 0.1),
+                          color:
+                              (widget.isSyncing
+                                      ? AppColors.ledRed
+                                      : AppColors.amber)
+                                  .withValues(
+                                    alpha:
+                                        0.15 +
+                                        hoverValue * 0.1 +
+                                        pulseValue * 0.1,
+                                  ),
                           blurRadius: 16 + hoverValue * 8 + pulseValue * 8,
                           spreadRadius: -4,
                         ),
@@ -166,8 +171,8 @@ class _SyncButtonState extends State<SyncButton>
                         fontWeight: FontWeight.w700,
                         color: widget.isEnabled
                             ? (widget.isSyncing
-                                ? Colors.white
-                                : AppColors.bgDeep)
+                                  ? Colors.white
+                                  : AppColors.bgDeep)
                             : AppColors.textMuted,
                         letterSpacing: 3,
                       ),
