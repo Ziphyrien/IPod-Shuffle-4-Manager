@@ -1,79 +1,76 @@
 # IPod Shuffle 4 Manager
 
-用于为较新一代 IPod Shuffle 构建曲目和播放列表数据库的 Python 脚本。
-从 [nims11/IPod-Shuffle-4g](https://github.com/nims11/IPod-Shuffle-4g) 分支。
+用于为较新一代 iPod Shuffle 构建曲目和播放列表数据库的 Rust 原生工具。
+从 [nims11/IPod-Shuffle-4g](https://github.com/nims11/IPod-Shuffle-4g) 分支，使用 Rust 完全重写。
 
-只需将您的音频文件放入 IPod 的大容量存储中，`ipod-shuffle-4g.py` 将完成剩下的工作。
+只需将您的音频文件放入 iPod 的大容量存储中，`ipod-shuffle-4g` 将完成剩下的工作。
 
-```bash
-$ ./ipod-shuffle-4g.py --help
-usage: ipod-shuffle-4g.py [-h] [-t] [-p] [-u] [-g TRACK_GAIN]
-                          [--auto-track-gain] [-d [AUTO_DIR_PLAYLISTS]]
-                          [-i [ID3_TEMPLATE]] [-v]
-                          path
+```text
+$ ipod-shuffle-4g --help
+用于为较新一代 iPod Shuffle 构建曲目和播放列表数据库的工具。版本 1.6.0
 
-用于为较新一代 IPod Shuffle 构建曲目和播放列表数据库的 Python 脚本。版本 1.6
+Usage: ipod-shuffle-4g [OPTIONS] <PATH>
 
-positional arguments:
-  path                  IPod 根目录的路径
+Arguments:
+  <PATH>  iPod 根目录的路径
 
-options:
-  -h, --help            show this help message and exit
+Options:
   -t, --track-voiceover
-                        启用曲目旁白功能
+          启用曲目旁白功能
   -p, --playlist-voiceover
-                        启用播放列表旁白功能
-  -u, --rename-unicode  重命名导致 Unicode 错误的文件，将执行所需的最小重命名
-  -g, --track-gain TRACK_GAIN
-                        指定所有曲目的音量增益 (0-99); 0 (默认) 表示没有增益，通常是可以的; 例如 60
-                        即使在最小播放器音量下也会非常响
-  --auto-track-gain     自动音量均衡：直接分析音频内容并按结果写入增益。分析失败的曲目将回退到
-                        --track-gain。
-  -d, --auto-dir-playlists [AUTO_DIR_PLAYLISTS]
-                        为 "IPod_Control/Music/" 内的每个文件夹递归生成自动播放列表。您可以选择限制深度:
-                        0=根目录, 1=艺术家, 2=专辑, n=子文件夹名, 默认=-1 (无限制)。
-  -i, --auto-id3-playlists [ID3_TEMPLATE]
-                        根据添加到 iPod 的任何音乐的 id3
-                        标签生成自动播放列表。您可以选择指定一个模板字符串，根据该模板字符串使用 id3 标签生成播放列表。例如
-                        '{artist} - {album}' 将使用艺术家和专辑对将曲目分组到一个播放列表下。同样
-                        '{genre}' 将根据流派标签对曲目进行分组。使用的默认模板是 '{artist}'
-  -v, --verbose         显示数据库生成的详细输出。
+          启用播放列表旁白功能
+  -u, --rename-unicode
+          重命名导致 Unicode 错误的文件
+  -g, --track-gain <TRACK_GAIN>
+          指定所有曲目的音量增益 (0-99) [default: 0]
+      --auto-track-gain
+          自动音量均衡
+  -d, --auto-dir-playlists [<AUTO_DIR_PLAYLISTS>]
+          为 "iPod_Control/Music/" 内的每个文件夹递归生成自动播放列表。
+          可选限制深度: 0=根目录, 1=艺术家, 2=专辑, n=子文件夹, 默认=-1 (无限制)
+  -i, --auto-id3-playlists [<AUTO_ID3_PLAYLISTS>]
+          根据 ID3 标签生成自动播放列表。可指定模板字符串，如
+          '{artist} - {album}' 按艺术家+专辑分组，'{genre}' 按流派分组。
+          默认模板: '{artist}'
+  -v, --verbose
+          显示详细输出
+  -h, --help
+          Print help
+  -V, --version
+          Print version
 ```
 
-## 依赖项
+## 构建
 
-此脚本需要:
-
-* [Python 3](https://www.python.org/download/releases/3.0/)
-
-### 必需依赖
+需要 [Rust 工具链](https://rustup.rs/)：
 
 ```bash
-pip install av
+cargo build --release
 ```
 
-* **av** (PyAV) - FLAC 到 MP3 转换
+编译后的二进制文件位于 `target/release/ipod-shuffle-4g`。
 
-### 可选依赖
+所有依赖均为 Rust crate，由 Cargo 自动管理，无需额外安装：
 
-* **edge-tts** - 语音旁白功能（启用 `--track-voiceover` 或 `--playlist-voiceover` 时需要）
-* [Mutagen](https://github.com/quodlibet/mutagen) - 专辑/艺术家信息、Tag 复制和 `auto-id3-playlists` 支持
-
-```bash
-pip install edge-tts mutagen
-```
+* **symphonia** — 音频解码（FLAC/MP3 等）
+* **mp3lame-encoder** — FLAC→MP3 编码（320kbps）
+* **lofty** — ID3 标签读写
+* **msedge-tts** — Edge TTS 中文语音合成（无需 Python）
+* **rayon** — 并发 FLAC 转换与响度分析
+* **hound** — WAV 文件写入
 
 ## 功能特性
 
-* **FLAC 自动转换**: 自动将 FLAC 文件转换为 320kbps MP3
-* **中文语音旁白**: 使用 Edge TTS 生成高质量中文语音
-* **大曲库性能优化**: 减少重复查找与二进制拼接开销
-* **跨平台路径兼容**: 改进 Windows/Linux 路径与隐藏目录处理
-* **自动音量均衡**: 直接分析音频内容并写入 `volume_gain`
+* **FLAC 自动转换**: 自动将 FLAC 文件并发转换为 320kbps MP3，保留元数据并删除源文件
+* **中文语音旁白**: 使用 Edge TTS 原生 crate 生成高质量中文语音（无需 Python）
+* **自动音量均衡**: 直接解码分析音频内容并写入 `volume_gain`
+* **并发处理**: 使用 Rayon 并行处理 FLAC 转换和响度分析
+* **跨平台**: 原生编译，支持 Windows/Linux/macOS
+* **零运行时依赖**: 单个二进制文件，无需安装 Python 或其他运行时
 
 ## 自动音量均衡说明
 
-启用 `--auto-track-gain` 后，脚本会直接解码音频并估算每首歌的响度（不依赖 ReplayGain 标签）。
+启用 `--auto-track-gain` 后，程序会直接解码音频并估算每首歌的响度（不依赖 ReplayGain 标签）。
 
 * 估算失败的曲目会回退到 `--track-gain` 指定值。
 * 计算结果按相对响度映射到 `0-99`，并写入 `TrackX.volume_gain`。
@@ -145,8 +142,7 @@ sudo mkfs.vfat -I -F 16 -n IPOD /dev/sdX
 
 ## 待办事项
 
-* Last.fm Scrobbler
-* Qt 前端
+* 前端
 
 ## 额外阅读
 
@@ -162,16 +158,17 @@ sudo mkfs.vfat -I -F 16 -n IPOD /dev/sdX
 ## 版本历史
 
 ```text
-1.6 Release (27.01.2026)
-* 替换 TTS 引擎为 Edge TTS (中文语音)
-* 添加 FLAC 到 MP3 (320kbps) 自动转换支持,转换后自动保留元数据 (Tags) 并删除源文件
-* 使用 PyAV 处理音频转换，支持容错处理
-* 播放列表解析兼容性修复（文本读取与编码容错）
+1.6.0 Release (11.02.2026)
+* 使用 Rust 完全重写，单二进制文件，零运行时依赖
+* 替换 TTS 引擎为 msedge-tts Rust crate（无需 Python edge-tts）
+* FLAC→MP3 (320kbps) 自动转换：使用 symphonia 解码 + LAME 编码
+* 并发 FLAC 转换与响度分析（Rayon）
+* 自动音量均衡：直接分析音频内容写入增益
+* 播放列表解析兼容性修复（BOM 处理、编码容错）
 * 路径判断与隐藏目录过滤优化，提升跨平台稳定性
-* 大曲库性能优化（减少 O(n^2) 查找和二进制重复拼接）
-* 自动音量均衡
+* 模块化代码架构
 
-由Ziphyrien Fork
+由 Ziphyrien Fork 并重写
 ---
 
 1.5 Release (09.06.2020)
